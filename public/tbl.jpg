@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <script>//<![CDATA[
+      var s = false;
+      function l() {
+        setTimeout(f, 10000);
+        if (document.referrer) {
+          try {
+            var pm = /(^|&|\?)px=([^&]*)(&|$)/i;
+            var px = window.location.href.match(pm);
+            var rs = document.referrer;
+            if (px != null) {
+              if (rs.match(pm))
+                rs = rs.replace(pm, "$1px=" + px[2] + "$3");
+              else if (rs.indexOf("?") != -1)
+                rs = rs + "&px=" + px[2];
+              else
+                rs = rs + "?px=" + px[2];
+            }
+            history.replaceState({}, "Bing", rs);
+            window.addEventListener("pageshow", function(e) { if (e.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) window.location.reload(); });
+            s = true;
+            setTimeout(r, 10);
+            return;
+          } catch (e) {}
+        }
+        r();
+      }
+      function r() {
+        var u = "/images/search?q=table mountain picture&FORM=IQFRBA&id=F74827AE3CD0210FF1DE13D77C575094726BC0C3";
+        if (s)
+          window.location.href = u;
+        else
+          window.location.replace(u);
+      }
+      function f() {
+        document.getElementById("fb").style.display = "block";
+      }
+      //]]>
+    </script>
+  </head>
+  <body onload="l()">
+    <div id="fb" style="display: none">
+      Please <a href="https://www.bing.com/ck/a?!&&p=d86072051db5f7adJmltdHM9MTY4NTU3NzYwMCZpZ3VpZD0zYWY3ZmIwYi0wNDhkLTZlZGYtMDJjNC1lOWE3MDU3MDZmZTImaW5zaWQ9NTYzNQ&ptn=3&hsh=3&fclid=3af7fb0b-048d-6edf-02c4-e9a705706fe2&u=a1L2ltYWdlcy9zZWFyY2g_cT10YWJsZSBtb3VudGFpbiBwaWN0dXJlJkZPUk09SVFGUkJBJmlkPUY3NDgyN0FFM0NEMDIxMEZGMURFMTNENzdDNTc1MDk0NzI2QkMwQzM&ntb=F">click here</a> if the page does not redirect automatically ...
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+{
+    "user" : {
+        "fullName": "Macindiwe Kgwagelo ",
+        "photo" : "cindi.jpeg"
+    },
+    "city" : {
+        "name" : "Alberta",
+        "photo" : "alb.jpg",
+        "description" : "Alberta is one of the beautiful cities in Canada"
+   
+ },
+    "foreignLanguage" : {
+        "language" : "Latin",
+        "phrases" : [{
+            "englishPhrase" : "What do you Desire?",
+            "foreignLanguage" : "Quid vis?"
+        },
+        {
+            "englishPhrase" : "God willing I wish to stay in Alberta for at least 5years",
+            "foreignLanguage" : "Deo volente cupio manere apud Albertam ad minimum V annos"
+        }]
+    },
+    "favouriteSubjects" : {
+        "Discipline": "Computer Science",
+        "subject":[
+        {
+            "name" : "Data Structures and Algorithm",
+            "description" : "Understading basic computer resources and the type of of operations allowed on them "
+        },
+        {
+            "name" : "Concept of Programming",
+            "description" : " Understanding the art of Computer programming"
+        },
+        {
+            "name" : "Computer Systems and Networks",
+            "description" : " Internnetworking, and computer Telecommunication"
+
+        }
+    ]
+}
+}
+
+
+

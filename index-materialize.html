@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     
+</head>
+<body>
+    <main>
+        <div class="container">
+
+            <section>
+                <div style="text-align: center;">
+                    <h1>Materialize page</h1>
+                </div>
+                    </section>
+                    <section>
+                        <div class="row">
+                            <div class="col s12 m9 l6">
+                              <ul class="tabs">
+                                <li class="tab col s4 m3 l3"><a href="index.html">Home</a></li>
+                                <li class="tab col s4 m3 l3"><a class="active" href="index-materialize.html">Materialize</a></li>
+                                <li class="tab col s4 m3 l3"><a href="index-bootstrap.html">Bootstrap</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                    </section>
+                    <hr>
+                    <section>
+                        <div class="row">
+                            <div class="col s12 m12 l6"><hp>{{data.user.fullName}}</p></div>
+                            <div class="col s12 m12 l6"><img src={{data.user.photo}} width="35%"></div>
+                          </div>
+                    </section>
+                    <hr>
+
+                    <section>
+                        <div class="row">
+                            <div class="col s12 m12 l6"><img src={{data.city.photo}} width="35%"></div>
+                            <div class="col s12 m12 l6"><hp>{{data.city.description}}</p></div>
+                           
+                          </div>
+                    </section>
+                    <hr>
+
+                    <section>
+                          <div class="s12 m8 l12">
+                            <table class="striped bordered">
+                              <thead>
+                                  <tr>
+                                      <th>ENGLISH PHRASE</th>
+                                      <th>FOREIGN PHRASE</th>
+                                  </tr>
+                              </thead>
+                              {{#each data.foreignLanguage.phrases}}
+                              <tr>
+                                  <td>{{englishPhrase}}</td>
+                                  <td>{{foreignLanguage}}</td>
+                              </tr>
+                              {{/each}}
+                              <table>
+                          </div>
+                        </div>
+                        </section><hr>
+                        <section>
+                            <div class="s12 m6 l12">
+                            {{#each data.favouriteSubjects.subject}}
+                                    <div class="row">
+                                              <div class="col s12 l4 m8">
+                                               <strong> <p>{{name}}</p></strong>
+                                                <div class="col s12 l7 m8">
+                                                  <p class = "text-right" >{{description}}</p>
+                                                </div>
+                                                </div>
+                            {{/each}}
+                                    </div>
+                             </div>
+                          </section>
+
+
+        </div>
+    </main>
+   
+</body>
+</html>
